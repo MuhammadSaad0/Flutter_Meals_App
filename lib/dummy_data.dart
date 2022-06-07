@@ -21,8 +21,8 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c4',
-    title: 'German',
-    color: Colors.amber,
+    title: 'Pakistani',
+    color: Colors.green,
   ),
   Category(
     id: 'c5',
@@ -32,7 +32,7 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c6',
     title: 'Exotic',
-    color: Colors.green,
+    color: Colors.amber,
   ),
   Category(
     id: 'c7',
@@ -156,30 +156,32 @@ const DUMMY_MEALS = const [
     categories: [
       'c4',
     ],
-    title: 'Wiener Schnitzel',
-    affordability: Affordability.Luxurious,
+    title: 'Chicken Karahi',
+    affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
+        "https://media.gettyimages.com/photos/butter-chicken-curry-inside-karahi-indian-serving-dishes-north-indian-picture-id889609122?s=2048x2048",
     duration: 60,
     ingredients: [
-      '8 Veal Cutlets',
-      '4 Eggs',
-      '200g Bread Crumbs',
-      '100g Flour',
-      '300ml Butter',
-      '100g Vegetable Oil',
+      'Boneless Chicken',
+      'Ghee',
+      '2 Tomatoes',
+      '1 Piece of Ginger',
+      'Black Pepper',
+      '100g Green Chillies',
       'Salt',
-      'Lemon Slices'
+      'Paprika'
     ],
     steps: [
-      'Tenderize the veal to about 2–4mm, and salt on both sides.',
-      'On a flat plate, stir the eggs briefly with a fork.',
-      'Lightly coat the cutlets in flour then dip into the egg, and finally, coat in breadcrumbs.',
-      'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
-      'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes ‘fluffy’.',
-      'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
-      'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
+      "In a wok fry chicken in oil or ghee with salt and pepper for 2-3 minutes until color changes.",
+      "Color has changed and few golden marks are visible. Remove the chicken with a slotted spoon leaving oil in the pan. Set aside.",
+      "In the same wok, fry finely chopped onions for 3 minutes until onion is translucent. You can skip onions if you like.",
+      "Add the spices and for a minute until spices sizzle.",
+      "Add tomatoes pureed or sliced and cook for 3-5 minutes. Cover the wok.",
+      "Cook until oil separates and the color of gravy darkens, keep stirring on medium-high heat.",
+      "Add fried chicken with juices in the wok again. Cover and cook for 10-15 minutes on low flame until chicken is tender.",
+      "Add a dollop of butter (if using) for a makhni flavor. Garnish with ginger and chili.",
+      "Chicken Karahi is ready. Garnish and serve.",
     ],
     isGlutenFree: false,
     isVegan: false,

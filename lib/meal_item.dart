@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import './meal.dart';
+import 'package:flutter/foundation.dart';
 
 class MealItem extends StatelessWidget {
   final String title;
@@ -40,9 +41,62 @@ class MealItem extends StatelessWidget {
                   ),
                   child: Image.network(imageUrl,
                       height: 250, width: double.infinity, fit: BoxFit.cover),
-                )
+                ),
+                Positioned(
+                  bottom: 20,
+                  right: 10,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                    width: 250,
+                    color: Colors.black54,
+                    child: Text(
+                      title,
+                      style: TextStyle(fontSize: 23, color: Colors.white),
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                    ),
+                  ),
+                ),
               ],
             ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.schedule,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(duration.toString() + " mins"),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.work,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(describeEnum(complexity)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(Icons.attach_money_sharp),
+                        SizedBox(
+                          width: 3,
+                        ),
+                        Text(describeEnum(affordability)),
+                      ],
+                    )
+                  ],
+                )),
           ],
         ),
       ),
