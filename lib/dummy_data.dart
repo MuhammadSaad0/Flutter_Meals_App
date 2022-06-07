@@ -47,7 +47,7 @@ const DUMMY_CATEGORIES = const [
   Category(
     id: 'c9',
     title: 'French',
-    color: Colors.pink,
+    color: Color.fromARGB(255, 202, 41, 146),
   ),
   Category(
     id: 'c10',

@@ -45,21 +45,26 @@ class MealDetailScreen extends StatelessWidget {
             ),
             buildSectionTitle("Steps", context),
             ListView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemBuilder: (contex, index) {
-                return ListTile(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: selectedMeal.steps.length,
+                itemBuilder: (contex, index) {
+                  return ListTile(
                     leading: CircleAvatar(child: Text("# ${index + 1}")),
                     title: Container(
                       margin: EdgeInsets.symmetric(vertical: 5),
                       padding:
                           EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blueGrey, width: 0.2),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                       child: Text(
                         selectedMeal.steps[index],
                       ),
-                    ));
-              },
-            ),
+                    ),
+                  );
+                })
           ],
         ),
       ),
