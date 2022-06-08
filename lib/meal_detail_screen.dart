@@ -10,6 +10,10 @@ class MealDetailScreen extends StatelessWidget {
   }
 
   static const routeName = "/meal-detail";
+  final Function _toggleFav;
+  final Function _isFav;
+
+  MealDetailScreen(this._toggleFav, this._isFav);
   @override
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context).settings.arguments;
@@ -32,7 +36,7 @@ class MealDetailScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 3,
-                  color: Color.fromARGB(255, 242, 171, 194),
+                  color: Color.fromARGB(255, 109, 191, 229),
                   child: Padding(
                     padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                     child: Text(selectedMeal.ingredients[index],
@@ -69,11 +73,17 @@ class MealDetailScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(
-          Icons.delete_forever,
-        ),
+        child: Icon(_isFav(mealId) ? Icons.star : Icons.star_border),
         onPressed: () {
-          Navigator.of(context).pop(mealId);
+          _toggleFav(mealId);
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: Duration(seconds: 1),
+              content: _isFav(mealId)
+                  ? Text("Added to favourites")
+                  : Text("Removed from favourites"),
+            ),
+          );
         },
       ),
     );
