@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/favourites_screen.dart';
+import 'package:flutter_complete_guide/main_drawer.dart';
 import './categories_screen.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -28,6 +29,7 @@ class _TabsScreenState extends State<TabsScreen> {
           backgroundColor: Theme.of(context).primaryColor,
           title: Text(titles[selected_index]),
         ),
+        drawer: MainDrawer(),
         body: TabBarView(
           children: [
             CategoriesScreen(),
